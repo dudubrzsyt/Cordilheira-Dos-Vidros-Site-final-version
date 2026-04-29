@@ -22,3 +22,21 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+
+node_modules
+dist
+
+
+
+
+
+# Ignorar o backend
+server.js
+backend/
+
+
+
+git add .gitignore
+git commit -m "Adiciona .gitignore para ignorar arquivos sensíveis"
+git push origin main

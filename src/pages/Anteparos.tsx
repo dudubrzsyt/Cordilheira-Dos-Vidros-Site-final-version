@@ -4,55 +4,91 @@ import SectionTitle from "@/components/SectionTitle";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import anteparoImg from "@/assets/anteparo.jpg";
+import anteparoImg from "@/assets/anteparo.png";
 import boxesImg from "@/assets/boxes.jpg";
 import equipeImg from "@/assets/equipe.jpg";
 import heroImg from "@/assets/hero-home.jpg";
 import obrasImg from "@/assets/obras.jpg";
 import sacadasImg from "@/assets/sacadas.jpg";
 import servicosImg from "@/assets/servicos.jpg";
-import imageImg from "@/assets/image.png";  
+import anteparo2Img from "@/assets/anteparo2.png";  
+
+// alterção
+import sacada07Img from "@/assets/sacada07.jpeg";
+import sacada08Img from "@/assets/sacada08.jpeg";
+import sacada06Img from "@/assets/sacada06.jpeg";
+import sacada2Img from "@/assets/sacada2.png";
+import sacada1Img from "@/assets/sacada1.png";
+import sacada5Img from "@/assets/sacada5.png";
+import sacada09Img from "@/assets/sacada09.jpeg";
+import sacada10Img from "@/assets/sacada10.jpeg";
+import sacada11Img from "@/assets/sacada11.jpeg";
+import sacada12Img from "@/assets/sacada12.jpeg";
+import sacada13Img from "@/assets/sacada13.jpeg";
+import anteparoNovoImg from "@/assets/anteparoNovo1.png";
+import anteparoMinimalistaImg from "@/assets/images3/anteparoMinimalista.png";
 const anteparos = [
   
-  
- { 
-    img: equipeImg, 
-    title: "Anteparos Personalizados", 
-    desc: "Projetos sob medida de anteparos em vidro laminado ou temperado. Soluções exclusivas para cada necessidade." 
-  },
-  { 
-    img: obrasImg, 
-    title: "Anteparos em Obras", 
-    desc: "Soluções de anteparos para projetos de construção, garantindo qualidade e durabilidade." 
-  },
-  { 
-    img: sacadasImg, 
-    title: "Anteparos para Sacadas", 
-    desc: "Soluções de anteparos para sacadas, proporcionando privacidade e proteção contra o clima." 
-  },
   {
-    img: heroImg,
-    title: "Divisórias de Vidro", 
-    desc: "Divisórias de vidro para ambientes comerciais e residenciais, combinando funcionalidade e design moderno."
-  },
-
-  {
-    img: servicosImg,
-    title: "Manutenção de Anteparos", 
-    desc: "Serviços de manutenção e reparo para anteparos de vidro, garantindo segurança e estética contínua."
-  },
-  
-  
-  { 
-    img: boxesImg,
-    to: "/anteparos"   // <-- adiciona aqui
+    img: sacada07Img,
+    title: "Anteparo Em Construção",
+    desc: "Anteparo aplicado em sacada panorâmica em fase de construção."
+    ,to: "/obras"
+    
     
   },
   {
-    img: anteparoImg,
-    title: "Instalação Profissional", 
-    desc: "Equipe especializada para instalação de anteparos, garantindo acabamento perfeito e segurança."
-  }
+    img: sacada08Img,
+    title: "Anteparo Residencial",
+    desc: "Anteparo em sacada residencial, mostrando privacidade e proteção."
+  },
+  {
+    img: sacada06Img,
+    title: "Anteparo Moderna",
+    desc: "Anteparo em sacada moderna, com design sofisticado."
+  },
+  {
+    img: sacada2Img,
+    title: "Anteparo Luxo",
+    desc: "Anteparo em sacada de luxo, destacando elegância."
+  },
+  {
+    img: anteparoMinimalistaImg,
+    title: "Anteparo Minimalista",
+    desc: "Anteparo minimalista, estilo clean e funcional."
+  },
+  {
+    img: sacada5Img,
+    title: "Anteparo Premium",
+    desc: "Anteparo em sacada premium, acabamento impecável."
+  },
+  {
+    img: sacada09Img,
+    title: "Anteparo Residencial Em Construção",
+    desc: "Anteparo em sacada residencial em fase de obra."
+  },
+  {
+    img: sacada10Img,
+    title: "Anteparo Moderna Em Construção",
+    desc: "Anteparo em sacada moderna em fase de obra."
+  },
+  {
+    img: sacada11Img,
+    title: "Anteparo Pré-Fabricados",
+    desc: "Anteparo em sacada pré-fabricada, montagem rápida e segura."
+  },
+  {
+    img: sacada12Img,
+    title: "Anteparo Pré-Fabricados",
+    desc: "Anteparo em sacada pré-fabricada, solução prática."
+  },
+
+  { 
+    img : sacada13Img,
+    title: "Anteparo Grande Inteira",
+    desc: "Anteparo em sacada grande inteira, proteção total com design elegante."
+  },
+
 ];
 
 const Anteparos = () => (
@@ -60,7 +96,7 @@ const Anteparos = () => (
     <PageHero 
       title="Anteparos" 
       subtitle="Soluções completas em anteparos de vidro para segurança, conforto e design moderno." 
-      image={imageImg} 
+      image={anteparo2Img} 
     />
     <section className="py-20">
       <div className="container mx-auto px-4">
@@ -85,30 +121,55 @@ const Anteparos = () => (
                 <h3 className="font-display font-bold text-2xl mb-4">{s.title}</h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">{s.desc}</p>
                 {s.to && (
-                  <Link to={s.to} className="btn-cta inline-flex text-base px-6 py-3">
-                    Saiba Mais <ArrowRight size={18} />
-                  </Link>
+                  <div>
+                    
+                  </div>
                 )}
               </div>
             </motion.div>
           ))}
         </div>
 
+
+
         {/* Espaço para fotos adicionais */}
-        <div className="grid md:grid-cols-3 gap-8 mt-20">
-          <div className="bg-gray-200 h-64 rounded-xl flex items-center justify-center">
-            <img src="" alt="foto de anteparo em obra" />
-          </div>
-          <div className="bg-gray-200 h-64 rounded-xl flex items-center justify-center">
-            <img src="" alt="foto de anteparo em sacada" />
-          </div>
-          <div className="bg-gray-200 h-64 rounded-xl flex items-center justify-center">
-         <img src="https://www.cristalvidrosrp.com.br/fx-files/images/medium/34_plgNewsPoster.jpg" alt="foto de divisória de vidro"  />
-          </div>
-        </div>
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-20">
+  {[ 
+    { src: "https://brasilredesprotecoes.com.br/wp-content/uploads/2025/10/dfce020857a66819c654f30aaf02fe51dr-1024x559.webp", alt: "foto de anteparo em obra" },
+    
+    { src: "https://intactaprotecoes.com.br/wp-content/uploads/2022/07/Redes-de-protecao-no-abc-768x1024.jpeg", alt: "anteparo " },
+
+    { src: anteparoNovoImg, alt: "foto de divisória de vidro" },
+
+  ].map((item, i) => (
+    <motion.div
+      key={i}
+      initial={{ opacity: 0, scale: 0.9, y: 40 }}
+      whileInView={{ opacity: 1, scale: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: i * 0.2 }}
+      className="relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl hover:scale-105 transition-transform duration-500 bg-gray-100 flex items-center justify-center"
+    >
+      <img
+        src={item.src}
+        alt={item.alt}
+        className="w-full h-64 object-cover rounded-2xl transform hover:scale-110 transition-transform duration-700"
+      />
+      {/* Overlay para efeito premium */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent rounded-2xl" />
+    </motion.div>
+  ))}
+</div>
+
+        {/* Texto adicional */}
       </div>
     </section>
   </Layout>
 );
+
+    
+
+
+
 
 export default Anteparos;

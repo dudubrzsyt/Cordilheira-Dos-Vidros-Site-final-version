@@ -5,9 +5,12 @@ import ImageCard from "@/components/ImageCard";
 import { motion } from "framer-motion";
 import boxesImg from "@/assets/boxes.jpg";
 import obrasImg from "@/assets/obras.jpg";
-import boxLuxoImg from "@/assets/boxluxo.png";
-import boxMinimalImg from "@/assets/boxminimal.png";
 import boxPremiunImg from "@/assets/boxPremiun.png";
+import boxAbrirImg from "@/assets/boxAbrir.jpeg";
+import boxTradicionalImg from "@/assets/boxTradicional.png";
+import boxCanto2Img from "@/assets/boxCanto2.jpeg";
+import boxCorrerImg from "@/assets/boxCorrer.jpeg";
+import boxTetoImg from "@/assets/boxTeto.png";
 
 const Boxes = () => (
   <Layout>
@@ -69,10 +72,13 @@ const Boxes = () => (
           subtitle="Confira alguns modelos exclusivos de boxes instalados." 
         />
         <div className="grid md:grid-cols-3 gap-8">
-          {[ 
-            { src: boxLuxoImg, alt: "Box Luxo", title: "Box Luxo" },
-            { src: boxMinimalImg, alt: "Box Minimalista", title: "Box Minimalista" },
-            { src: boxPremiunImg, alt: "Box Premium", title: "Box Premium" }
+           {[   { src: boxTradicionalImg, alt: "Box Tradicional", title: "Caixa Frontal Tradicional (Vidro incolor + Alumínio Branco/Fosco)" },
+            { src: boxCanto2Img, alt: "Box Canto", title: "Box De Canto" },
+            { src: boxAbrirImg, alt: "Box De Abrir", title: "Box De Abrir" },
+            { src: boxPremiunImg, alt: "Box Premium", title: "Box Premium" },
+            { src: boxCorrerImg, alt: "Box de Correr", title: "Box De Correr" },
+            { src: boxTetoImg, alt: "Box Teto", title: "Box Até o Teto" },
+            
           ].map((item, i) => (
             <motion.div 
               key={item.title + i} 

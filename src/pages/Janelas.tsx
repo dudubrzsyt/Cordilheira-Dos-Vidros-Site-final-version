@@ -4,76 +4,52 @@ import SectionTitle from "@/components/SectionTitle";
 import ContactForm from "@/components/ContactForm";
 import { motion } from "framer-motion";
 import servicosImg from "@/assets/servicos.jpg";
-import { Image, Zap, Layers, Ruler } from "lucide-react";
-
+import manutencao1Img from "@/assets/images3/manutencao1.jpeg";
+import manutencao2Img from "@/assets/images3/manutencao2.jpeg";
+import luanImg from "@/assets/images3/luan.jpeg";
+import { Wrench, ShieldCheck, Users } from "lucide-react";
+import janelasCorrer4Img from "@/assets/images3/janelasCorrer4.png";
+import janelasCorrer3Img from "@/assets/images3/janelasCorrer3.png";
+import janelasCorrer5Img from "@/assets/images3/janelasCorrer5.png";
+import janelaCantoImg from "@/assets/images3/janelaCanto.png"; 
 const Janelas = () => (
   <Layout>
     <PageHero 
       title="Janelas de Correr" 
-      subtitle="Elegância, praticidade e modernidade para seu ambiente." 
+      subtitle="Instalação e manutenção com qualidade, segurança e confiança." 
       image={servicosImg} 
     />
 
-    {/* Seção de características */}
-    <section className="py-20">
+
+      {/* Nova galeria com as últimas 3 imagens */}
+    <section className="py-20 bg-gradient-to-r from-gray-50 to-white">
       <div className="container mx-auto px-4">
         <SectionTitle 
-          title="Características das Janelas" 
-          subtitle="Descubra porque nossas janelas de correr são a escolha ideal." 
+          title="Mais Serviços em Janelas de Correr" 
+          subtitle="Confira outros exemplos de trabalhos realizados pela nossa equipe." 
         />
-        <div className="grid md:grid-cols-3 gap-6 mb-20">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
           {[
-            { icon: Zap, title: "Abertura Rápida", desc: "Sistema de correr suave e agressivo, ideal para quem busca praticidade." },
-            { icon: Layers, title: "Design Moderno", desc: "Linhas retas e acabamento sofisticado que valorizam qualquer ambiente." },
-            { icon: Ruler, title: "Sob Medida", desc: "Produzidas conforme as dimensões do seu espaço, garantindo encaixe perfeito." },
+            { src: janelasCorrer3Img, title: "Troca de Trilhos", desc: "Substituímos trilhos danificados para garantir o funcionamento perfeito das janelas." },
+            { src: janelaCantoImg, title: "Instalação de Novas Janelas", desc: "Projetos sob medida com vidro temperado e acabamento premium." },
+            { src: janelasCorrer5Img, title: "Revisão Completa", desc: "Manutenção preventiva para aumentar a durabilidade e segurança das janelas." },
           ].map((item, i) => (
             <motion.div 
-              key={item.title} 
-              initial={{ opacity: 0, scale: 0.9 }} 
-              whileInView={{ opacity: 1, scale: 1 }} 
-              viewport={{ once: true }} 
-              transition={{ delay: i * 0.15, duration: 0.4 }}
-              className="text-center p-6 rounded-xl border border-border hover:shadow-xl transition-all cursor-pointer hover:border-accent"
-            >
-              <item.icon size={36} className="mx-auto mb-3 text-accent" />
-              <h4 className="font-display font-bold mb-2">{item.title}</h4>
-              <p className="text-muted-foreground text-sm">{item.desc}</p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    {/* Espaço para fotos */}
-    <section className="py-20 section-dark">
-      <div className="container mx-auto px-4">
-        <SectionTitle 
-          title="Galeria de Janelas" 
-          subtitle="Veja exemplos de janelas normais e de correr instaladas." 
-          light 
-        />
-        <div className="grid md:grid-cols-2 gap-8">
-          {[ "Janela Normal", "Janela de Correr" ].map((tipo, i) => (
-            <motion.div 
-              key={tipo} 
+              key={i}
               initial={{ opacity: 0, y: 40 }} 
               whileInView={{ opacity: 1, y: 0 }} 
               viewport={{ once: true }} 
               transition={{ delay: i * 0.2, duration: 0.5 }}
-              className="bg-white rounded-xl shadow-lg overflow-hidden"
+              className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform duration-500"
             >
-              <div className="h-64 bg-gray-200 flex items-center justify-center">
-                <Image size={48} className="text-gray-400" />
-                <span className="ml-2 text-gray-500">Espaço para foto {tipo}</span>
-              </div>
-              <div className="p-6">
-                <h3 className="font-display font-bold text-lg mb-2">{tipo}</h3>
-                <p className="text-muted-foreground text-sm">
-                  As {tipo.toLowerCase()} oferecem conforto, estética e funcionalidade. 
-                  São ideais para ambientes residenciais e comerciais, trazendo luminosidade, ventilação 
-                  e um toque moderno ao espaço. Com materiais resistentes e acabamento refinado, 
-                  garantem durabilidade e sofisticação.
-                </p>
+              <img 
+                src={item.src} 
+                alt={item.title} 
+                className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110 sm:h-80" 
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <h3 className="text-white text-lg sm:text-xl font-bold mb-2">{item.title}</h3>
+                <p className="text-white text-sm sm:text-base px-4 text-center">{item.desc}</p>
               </div>
             </motion.div>
           ))}
@@ -81,17 +57,76 @@ const Janelas = () => (
       </div>
     </section>
 
-    {/* Formulário de contato */}
-    <section className="py-20">
-      <div className="container mx-auto px-4">
-        <SectionTitle 
-          title="Solicite um Orçamento" 
-          subtitle="Preencha o formulário e nossa equipe retornará com opções personalizadas." 
-        />
-        <ContactForm/>
-      </div>
-    </section>
+
+    
+
+
+<section className="py-20 bg-gradient-to-r from-blue-50 to-white">
+  <div className="container mx-auto px-4">
+    <SectionTitle 
+      title="Por que escolher nossas janelas?" 
+      subtitle="Mais do que estética, oferecemos manutenção prática e suporte especializado." 
+    />
+    <div className="grid md:grid-cols-3 gap-8">
+      {[
+         { icon: Wrench, title: "Manutenção Fácil", desc: "Troca de roldanas, vedações e ajustes rápidos para prolongar a vida útil da sua janela." },
+            { icon: ShieldCheck, title: "Segurança Garantida", desc: "Serviços realizados com materiais de alta qualidade e seguindo normas técnicas." },
+            { icon: Users, title: "Equipe Especializada", desc: "Profissionais experientes prontos para atender desde pequenos reparos até grandes projetos." },
+      ].map((item, i) => (
+        <motion.div 
+          key={i}
+          initial={{ opacity: 0, y: 30 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true }} 
+          transition={{ delay: i * 0.2, duration: 0.5 }}
+          className="text-center p-6 rounded-xl bg-white shadow-lg hover:shadow-2xl transition-transform hover:scale-105"
+        >
+          <item.icon size={40} className="mx-auto mb-4 text-blue-600 animate-pulse" />
+          <h4 className="font-display font-bold mb-2">{item.title}</h4>
+          <p className="text-muted-foreground text-sm">{item.desc}</p>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section className="py-20 bg-gray-100">
+  <div className="container mx-auto px-4">
+    <SectionTitle 
+      title="O que nossos clientes dizem" 
+      subtitle="Satisfação garantida em cada projeto." 
+    />
+    <div className="grid md:grid-cols-2 gap-8">
+      {[
+        { name: "Maria S.", text: "Excelente atendimento e qualidade impecável nas janelas instaladas." },
+        { name: "Carlos P.", text: "Serviço rápido e profissionais muito atenciosos. Recomendo!" },
+      ].map((item, i) => (
+        <motion.div 
+          key={i}
+          initial={{ opacity: 0, y: 30 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true }} 
+          transition={{ delay: i * 0.2, duration: 0.5 }}
+          className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition"
+        >
+          <p className="text-gray-700 italic mb-4">"{item.text}"</p>
+          <h5 className="font-bold text-blue-600">{item.name}</h5>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+
+<SectionTitle 
+  title="Solicite um Orçamento" 
+  subtitle="Instalação ou manutenção: preencha o formulário e nossa equipe retornará com opções personalizadas. 
+            Seus dados são protegidos e usados apenas para contato comercial." 
+/>
+
+<ContactForm />
+
   </Layout>
 );
-
 export default Janelas;

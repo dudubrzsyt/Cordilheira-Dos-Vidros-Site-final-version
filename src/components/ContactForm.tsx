@@ -23,7 +23,7 @@ const ContactForm = () => {
     Serviço: ${form.servico}. Descrição: ${form.descricao}. Aguardo mais informações. Obrigado!`;
 
     // Abre WhatsApp
-    window.open(`https://wa.me/+5511914973669?text=${encodeURIComponent(msg)}`, "_blank");
+    window.open(`https://wa.me/5511977016309?text=${encodeURIComponent(msg)}`, "_blank");
 
     try {
       const data = new FormData();
@@ -46,7 +46,7 @@ const ContactForm = () => {
         setFeedback("❌ Erro ao enviar. Tente novamente.");
       }
     } catch {
-      setFeedback("❌ Falha de conexão com o servidor.");
+      setFeedback("❌ Falha de conexão com o servidor ao enviar fotos ou textos no formulário.");
     } finally {
       setLoading(false);
     }
@@ -61,63 +61,84 @@ const ContactForm = () => {
       transition={{ duration: 0.6 }}
       className="max-w-xl mx-auto p-8 rounded-2xl shadow-xl bg-gray-50 space-y-6"
     >
-      <h2 className="text-2xl font-display font-bold text-center mb-4">Solicite seu Orçamento</h2>
+      <h2 
+  className="text-center text-3xl sm:text-4xl md:text-5xl font-display font-light tracking-wide text-gray-900 mb-12"
+>
+  Solicite seu Orçamento
+</h2>
+<div className="flex justify-center mb-8">
+  <div className="w-24 h-[2px] bg-gradient-to-r from-blue-800 via-gray-400 to-blue-800"></div>
+</div>
 
-      {/* Campos principais */}
-      {[
-        { name: "nome", label: "Nome", type: "text", placeholder: "nome completo", icon: <User size={18} /> },
-        { name: "email", label: "E-mail", type: "email", placeholder: "email", icon: <Mail size={18} /> },
-        { name: "whatsapp", label: "WhatsApp", type: "tel", placeholder: "número do WhatsApp", icon: <Phone size={18} /> },
-        { name: "descricao", label: "Descrição", type: "text", placeholder: "descreva seu projeto", icon: <FileText size={18} /> },
-      ].map((field) => (
-        <motion.div key={field.name} whileHover={{ scale: 1.02 }} className="relative">
-          <label className="block text-sm font-semibold mb-1 text-gray-700">{field.label}</label>
-          <div className="flex items-center border border-gray-300 rounded-lg bg-white px-3">
-            {field.icon}
-            <input
-              type={field.type}
-              placeholder={field.placeholder}
-              required
-              value={form[field.name as keyof typeof form] as string}
-              onChange={(e) => setForm({ ...form, [field.name]: e.target.value })}
-              className="w-full px-3 py-2 rounded-lg bg-transparent text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-accent transition-all"
-            />
-          </div>
-        </motion.div>
-      ))}
-
-      {/* Seleção de serviço */}
-      <div>
-        <label className="block text-sm font-semibold mb-1 text-gray-700">Serviço</label>
-        <div className="flex items-center border border-gray-300 rounded-lg bg-white px-3">
-          <Wrench size={18} />
-          <select
-            value={form.servico}
-            onChange={(e) => setForm({ ...form, servico: e.target.value })}
-            className="w-full px-3 py-2 rounded-lg bg-transparent text-gray-800 focus:outline-none focus:ring-2 focus:ring-accent transition-all"
-            required
-          >
-            <option value="">Selecione um serviço</option>
-            <option value="Box de Banheiro">Box de Banheiro</option>
-            <option value="Janela de Correr">Janela de Correr</option>
-            <option value="Guarda-Corpo">Guarda-Corpo</option>
-            <option value="Espelho">Espelho</option>
-          </select>
-        </div>
+      {/* Container centralizado */}
+<div className="max-w-lg mx-auto space-y-6 px-4">
+  {/* Campos principais */}
+  {[
+    { name: "nome", label: "Nome", type: "text", placeholder: "Nome completo", icon: <User size={18} /> },
+    { name: "email", label: "E-mail", type: "email", placeholder: "Seu e-mail", icon: <Mail size={18} /> },
+    { name: "whatsapp", label: "WhatsApp", type: "tel", placeholder: "Número do WhatsApp", icon: <Phone size={18} /> },
+    { name: "descricao", label: "Descrição", type: "text", placeholder: "Descreva seu projeto", icon: <FileText size={18} /> },
+  ].map((field) => (
+    <motion.div key={field.name} whileHover={{ scale: 1.02 }} className="relative">
+      <label className="block text-sm font-semibold mb-1 text-gray-700">{field.label}</label>
+      <div className="flex items-center border border-gray-300 rounded-lg bg-white px-4">
+        {field.icon}
+        <input
+          type={field.type}
+          placeholder={field.placeholder}
+          required
+          value={form[field.name as keyof typeof form] as string}
+          onChange={(e) => setForm({ ...form, [field.name]: e.target.value })}
+          className="w-full px-4 py-3 rounded-lg bg-transparent text-gray-800 
+                     placeholder:text-gray-400 placeholder:text-center 
+                     focus:outline-none focus:ring-2 focus:ring-accent transition-all"
+        />
       </div>
+    </motion.div>
+  ))}
+
+  {/* Seleção de serviço */}
+  <div>
+    <label className="block text-sm font-semibold mb-2 text-primary-foreground">
+      Serviço
+    </label>
+    <div className="flex items-center border border-blue-200 rounded-xl 
+                    bg-gradient-to-r from-white via-blue-50 to-white px-4 shadow-sm 
+                    focus-within:shadow-md transition-shadow duration-300">
+      <Wrench size={18} className="text-blue-600" />
+      <select
+        value={form.servico}
+        onChange={(e) => setForm({ ...form, servico: e.target.value })}
+        className="w-full px-4 py-3 rounded-xl bg-transparent text-gray-800 
+                   placeholder:text-center focus:outline-none focus:ring-2 
+                   focus:ring-blue-500 transition-all duration-300"
+        required
+      >
+        <option value="">Selecione um serviço</option>
+        <option value="Box de Banheiro">Box de Banheiro</option>
+        <option value="Janela de Correr">Janelas de Correr</option>
+        <option value="Anteparo">Anteparos</option>
+        <option value="Manutenção">Manutenção</option>
+        <option value="Sacadas">Sacadas</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+
 
       {/* Upload de imagem */}
       <div>
         <label className="block text-sm font-semibold mb-1 text-gray-700">Foto do espaço (opcional)</label>
-        <div className="flex items-center border border-gray-300 rounded-lg bg-white px-3 py-2">
-          <ImageIcon size={18} />
-          <input
-            type="file"
-            accept="image/*"
-            onChange={(e) => setForm({ ...form, imagem: e.target.files?.[0] || null })}
-            className="ml-3 text-gray-600"
-          />
-        </div>
+        <div className="flex flex-col sm:flex-row items-start sm:items-center border border-gray-300 rounded-lg bg-white px-3 py-2">
+  <ImageIcon size={18} />
+  <input
+    type="file"
+    accept="image/*"
+    onChange={(e) => setForm({ ...form, imagem: e.target.files?.[0] || null })}
+    className="w-full sm:w-auto mt-2 sm:mt-0 sm:ml-3 text-gray-600"
+  />
+</div>
       </div>
 
       {/* Botão */}

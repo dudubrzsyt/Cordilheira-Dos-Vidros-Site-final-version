@@ -2,21 +2,48 @@ import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 import SectionTitle from "@/components/SectionTitle";
 import ImageCard from "@/components/ImageCard";
-import obrasImg from "@/assets/obras.jpg";
-import heroImg from "@/assets/hero-home.jpg";
 import boxesImg from "@/assets/boxes.jpg";
-import sacadasImg from "@/assets/sacadas.jpg";
-import servicosImg from "@/assets/servicos.jpg";
-import equipeImg from "@/assets/equipe.jpg";
+import sacadas9Img from "@/assets/sacadas4/sacadas9.jpeg";
+import sacada12Img from "@/assets/sacada12.jpeg";
+import janelaCorrer3Img from "@/assets/images3/janelasCorrer3.png";
+import obrasImg from "@/assets/obras.jpg";
+import manutencaoVidrosImg from "@/assets/images3/manutencaoVidros.png";
+import manutencaoBoxImg from "@/assets/images3/manutencaoBox.png";
 
 const projects = [
-  { img: heroImg, title: "Residência Premium", desc: "Fachada em vidro temperado com esquadrias de alumínio." },
-  { img: obrasImg, title: "Box para Banheiro", desc: "Box de canto em vidro temperado 8mm." },
-  { img: sacadasImg, title: "Sacada Residencial", desc: "Envidraçamento com sistema de folhas deslizantes." },
-  { img: boxesImg, title: "Cobertura em Vidro", desc: "Cobertura em vidro laminado com estrutura metálica." },
-  { img: servicosImg, title: "Fachada Comercial", desc: "Pele de vidro para edifício comercial." },
-  { img: equipeImg, title: "Guarda-corpo", desc: "Guarda-corpo em vidro temperado com fixação por botões." },
+  { 
+    img: manutencaoBoxImg, 
+    title: "Anteparo Pré-fabricado", 
+    desc: "Estrutura em vidro temperado pré-montada, oferecendo praticidade na instalação e acabamento moderno." 
+  },
+  { 
+    img: sacada12Img, 
+    title: "Anteparo em Construção", 
+    desc: "Montagem de anteparo em vidro com esquadrias resistentes, garantindo segurança e estética durante a obra." 
+  },
+  { 
+    img: sacadas9Img, 
+    title: "Sacada Residencial", 
+    desc: "Sistema de envidraçamento deslizante que protege contra vento e chuva, mantendo a vista panorâmica." 
+  },
+  { 
+    img: boxesImg, 
+    title: "Box de Vidro", 
+    desc: "Box em vidro laminado com estrutura metálica, unindo resistência, praticidade e design sofisticado." 
+  },
+  { 
+    img: janelaCorrer3Img, 
+    title: "Janela de Correr Pronta", 
+    desc: "Janela finalizada em vidro temperado, com deslizamento suave e acabamento premium para ambientes modernos." 
+  },
+  { 
+    img: manutencaoVidrosImg, 
+    title: "Guarda-corpo", 
+    desc: "Guarda-corpo em vidro temperado fixado por botões metálicos, oferecendo segurança sem perder a elegância." 
+  },
 ];
+
+
 
 const Obras = () => (
   <Layout>

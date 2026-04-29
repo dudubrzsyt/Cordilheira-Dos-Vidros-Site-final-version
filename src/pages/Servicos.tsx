@@ -4,17 +4,50 @@ import SectionTitle from "@/components/SectionTitle";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import servicosImg from "@/assets/servicos.jpg";
+import janela2Img from "@/assets/images3/janela2.png";
 import boxesImg from "@/assets/boxes.jpg";
 import sacadasImg from "@/assets/sacadas.jpg";
 import obrasImg from "@/assets/obras.jpg";
+import janela3Img from "@/assets/images3/janela3.png";
+import servicosImg from "@/assets/servicos.jpg";
+import janela4Img from "@/assets/images3/janela4.png";
+import janela5Img from "@/assets/images3/janela5.png";
 
 const services = [
-  { img: boxesImg, title: "Boxes para Banheiro", desc: "Fabricação e instalação de boxes em vidro temperado sob medida. Modelos de canto, frontal e de abrir com acabamento premium.", to: "/boxes" },
-  { img: sacadasImg, title: "Envidraçamento de Sacadas", desc: "Sistema completo de envidraçamento com vidro temperado. Proteção contra vento, chuva e ruídos com total transparência.", to: "/sacadas" },
-  { img: obrasImg, title: "Espelhos e Divisórias", desc: "Espelhos decorativos e divisórias em vidro para ambientes residenciais e comerciais. Design elegante e funcional." },
-  { img: servicosImg, title: "Fachadas e Pele de Vidro", desc: "Projetos de fachadas em vidro para edifícios comerciais e residenciais. Alta performance térmica e acústica." },
+  { 
+    img: boxesImg, 
+    title: "Boxes para Banheiro", 
+    desc: "Fabricação e instalação de boxes em vidro temperado sob medida. Modelos de canto, frontal e de abrir com acabamento premium.", 
+    to: "/boxes" 
+  },
+  { 
+    img: sacadasImg, 
+    title: "Envidraçamento de Sacadas", 
+    desc: "Sistema completo de envidraçamento com vidro temperado. Proteção contra vento, chuva e ruídos com total transparência.", 
+    to: "/sacadas" 
+  },
+  { 
+  img: obrasImg, 
+  title: "Box de Banheiro", 
+  desc: "Box em vidro temperado sob medida, com acabamento refinado que une segurança e praticidade.", 
+  to: "/boxes" 
+},
+
+  { 
+    img: janela5Img, 
+    title: "Janelas de Correr", 
+    desc: "Instalação e manutenção de janelas de correr em vidro temperado. Soluções práticas e duráveis para seu ambiente.", 
+    to: "/janelas" 
+  },
+  { 
+    img: janela3Img, 
+    title: "Manutenção de Janelas", 
+    desc: "Serviços especializados de manutenção e reparo em janelas de vidro. Troca de peças, ajustes e vedação com garantia de qualidade.", 
+    to: "/manutencao" 
+  },
+  
 ];
+
 
 const Servicos = () => (
   <Layout>
