@@ -1,6 +1,6 @@
 import { MessageCircle } from "lucide-react";
 
-const WHATSAPP_NUMBER = "5511977016309"; // Número do Luan
+const WHATSAPP_NUMBER = "5511914973669"; // Número do Luan
 
 const WhatsAppFloat = () => {
   return (

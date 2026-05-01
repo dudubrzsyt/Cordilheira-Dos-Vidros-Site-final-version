@@ -49,7 +49,10 @@ const Footer = () => {
             <div className="space-y-3 text-primary-foreground/70">
               <div className="flex items-center gap-3 hover:text-accent transition-colors duration-300">
                 <Phone size={16} className="text-accent" />
-                <span>+55 11 97701-6309</span>
+                <span>São Paulo- 55 11 91497-3669</span>
+                <span>
+                  
+                  Sorocaba- 55 15 99172-8110 </span>
               </div>
               <div className="flex items-center gap-3 hover:text-accent transition-colors duration-300">
                 <Mail size={16} className="text-accent" />
@@ -70,7 +73,7 @@ const Footer = () => {
         {/* Linha final */}
         <div className="mt-10 pt-6 border-t border-primary-foreground/10 text-center text-primary-foreground/50 text-xs leading-relaxed">
           © {new Date().getFullYear()} Outras formas de adquirir nossos produtos: entre em contato com nossa equipe de atendimento.  
-          <br /> Endereço: Rua Lauzane 823 - Capela do Socorro, São Paulo - SP 04782-010
+          <br /> Endereço Escritório Administrativo: Rua Lauzane 823 - Capela do Socorro, São Paulo - SP 04782-010
           <br /> Nossos serviços digitais são fornecidos pela Cordilheira Vidros Brasil Ltda.  
           <br /> CNPJ: 63.215.219/0001-28 | CEP 04782-010 São Paulo - SP
           <br /> © 2026 Cordilheira Vidros. Todos os direitos reservados.  

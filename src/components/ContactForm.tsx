@@ -23,7 +23,7 @@ const ContactForm = () => {
     Serviço: ${form.servico}. Descrição: ${form.descricao}. Aguardo mais informações. Obrigado!`;
 
     // Abre WhatsApp
-    window.open(`https://wa.me/5511977016309?text=${encodeURIComponent(msg)}`, "_blank");
+    window.open(`https://wa.me/5511914973669?text=${encodeURIComponent(msg)}`, "_blank");
 
     try {
       const data = new FormData();
@@ -77,7 +77,7 @@ const ContactForm = () => {
     { name: "nome", label: "Nome", type: "text", placeholder: "Nome completo", icon: <User size={18} /> },
     { name: "email", label: "E-mail", type: "email", placeholder: "Seu e-mail", icon: <Mail size={18} /> },
     { name: "whatsapp", label: "WhatsApp", type: "tel", placeholder: "Número do WhatsApp", icon: <Phone size={18} /> },
-    { name: "descricao", label: "Descrição", type: "text", placeholder: "Descreva seu projeto", icon: <FileText size={18} /> },
+    { name: "descricao", label: "Descrição Projeto", type: "text", placeholder: "Descreva seu projeto", icon: <FileText size={18} /> },
   ].map((field) => (
     <motion.div key={field.name} whileHover={{ scale: 1.02 }} className="relative">
       <label className="block text-sm font-semibold mb-1 text-gray-700">{field.label}</label>
