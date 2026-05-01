@@ -4,14 +4,10 @@ import SectionTitle from "@/components/SectionTitle";
 import ContactForm from "@/components/ContactForm";
 import { motion } from "framer-motion";
 import servicosImg from "@/assets/servicos.jpg";
-import manutencao1Img from "@/assets/images3/manutencao1.jpeg";
-import manutencao2Img from "@/assets/images3/manutencao2.jpeg";
-import luanImg from "@/assets/images3/luan.jpeg";
 import { Wrench, ShieldCheck, Users } from "lucide-react";
-import janelasCorrer4Img from "@/assets/images3/janelasCorrer4.png";
 import janelasCorrer3Img from "@/assets/images3/janelasCorrer3.png";
 import janelasCorrer5Img from "@/assets/images3/janelasCorrer5.png";
-import janelaCantoImg from "@/assets/images3/janelaCanto.png"; 
+import janela1Img from '../assets/images3/janela1.png';
 const Janelas = () => (
   <Layout>
     <PageHero 
@@ -31,7 +27,7 @@ const Janelas = () => (
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
           {[
             { src: janelasCorrer3Img, title: "Troca de Trilhos", desc: "Substituímos trilhos danificados para garantir o funcionamento perfeito das janelas." },
-            { src: janelaCantoImg, title: "Instalação de Novas Janelas", desc: "Projetos sob medida com vidro temperado e acabamento premium." },
+            { src: janela1Img, title: "Instalação de Novas Janelas", desc: "Projetos sob medida com vidro temperado e acabamento premium." },
             { src: janelasCorrer5Img, title: "Revisão Completa", desc: "Manutenção preventiva para aumentar a durabilidade e segurança das janelas." },
           ].map((item, i) => (
             <motion.div 

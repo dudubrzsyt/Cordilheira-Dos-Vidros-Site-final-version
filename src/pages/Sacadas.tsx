@@ -11,14 +11,14 @@ import sacadas2Img from "@/assets/sacadas4/sacadas2.jpeg";
 import sacadas3Img from "@/assets/sacadas4/sacadas3.jpeg";
 import sacadas4Img from "@/assets/sacadas4/sacadas4.png";
 import sacadas5Img from "@/assets/sacadas4/sacadas5.jpeg";
-import sacadas6Img from "@/assets/sacadas4/sacadas6.jpeg";
 import sacadas7Img from "@/assets/sacadas4/sacadas7.jpeg";
 import sacadas8Img from "@/assets/sacadas4/sacadas8.jpeg";
 import sacadas9Img from "@/assets/sacadas4/sacadas9.jpeg";
 import sacadaNovaImg from "@/assets/images3/sacadaNova.jpeg";
 import sacadaModernaImg from "@/assets/images3/sacadaModerna.png";
 import sacadas12Img from "@/assets/sacadas4/sacadas12.jpeg";
-import sacadaultimaImg from "@/assets/images3/sacadaultima.png";
+import sacadaFinalImg from '../assets/images3/sacadaFinal.png';
+
 const Sacadas = () => (
   <Layout>
     <PageHero 
@@ -97,7 +97,7 @@ const Sacadas = () => (
 
             // fotos de sacadas reais, sem edição, para mostrar a qualidade do serviço
             { src: sacadas5Img, alt: "Sacada Residencial", title: "Sacada Residencial Em Construção" },
-            { src: sacadaultimaImg, alt: "Sacada Moderna", title: "Sacada Simples Pronta Panorâmica" },
+            { src: sacadaFinalImg, alt: "Sacada Moderna", title: "Sacada Simples Pronta Panorâmica" },
             { src: sacadas7Img, alt: "Sacada Panorâmica", title: "Sacada Pré-Fabricados" },
             { src: sacadas8Img, alt: "Sacada Panorâmica", title: "Sacada Pré-Fabricados"},
             { src: sacadas12Img, alt: "Sacada Inteira", title: "Sacada Grande Inteira" }
