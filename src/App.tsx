@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { Analytics } from "@vercel/analytics/react";
 import Index from "./pages/Index";
 import Boxes from "./pages/Boxes";
 import Sacadas from "./pages/Sacadas";
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/admin" element={<Admin />} />
         </Routes>
       </BrowserRouter>
+      <Analytics />
     </TooltipProvider>
   </QueryClientProvider>
 );
